@@ -50,7 +50,7 @@ namespace dotnet_cyberpunk_challenge_3_14
             // INSERT YOUR CODE
             BiotechnicaKuangPrimusMalware iceBreaker = new BiotechnicaKuangPrimusMalware();
             await iceBreaker.Initialize();
-            List<BiotechnicaProcessList> processLists = await iceBreaker.GetProcessList();
+            List<BiotechnicaMessageProcessList> processLists = await iceBreaker.GetProcessList();
             IEnumerable<string> memoryMapping = await iceBreaker.GetProcessMemoryMapping();
 
         }
@@ -70,9 +70,9 @@ namespace dotnet_cyberpunk_challenge_3_14
             // TODO: Add the Biotechnica test with `MultiKuangPrimusMalware` object and use it to get 
             // the process list and process memory mapping essentially just like we're doing above
             // INSERT YOUR CODE
-            MultiKuangPrimusMalware<BiotechnicaMessageRoot, BiotechnicaProcessList> iceBreaker = new MultiKuangPrimusMalware<BiotechnicaMessageRoot, BiotechnicaProcessList>();
+            MultiKuangPrimusMalware<BiotechnicaMessageRoot, BiotechnicaMessageProcessList> iceBreaker = new MultiKuangPrimusMalware<BiotechnicaMessageRoot, BiotechnicaMessageProcessList>();
             await iceBreaker.Initialize();
-            List<BiotechnicaProcessList> processLists = await iceBreaker.GetProcessList();
+            List<BiotechnicaMessageProcessList> processLists = await iceBreaker.GetProcessList();
             IEnumerable<string> memoryMapping = await iceBreaker.GetProcessMemoryMapping();
         }
     }
